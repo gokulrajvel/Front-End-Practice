@@ -15,43 +15,57 @@
             background-attachment: fixed;
             background-position: center;
         }
-
-        /* Combined Nav for better structure */
         .navbar {
             display: flex;
             align-items: center;
             justify-content: space-between;
             padding: 10px 5%;
-            background-color: #eee5e5;
+            background-color: #c34e4e;
+            border-top: #333 solid 3px;
+            border-bottom: #333 solid 2px;
         }
 
         .logo img {
             height: 50px;
+            width: auto;
         }
 
         .nav-links {
             display: flex;
+            justify-content: right;
             gap: 20px;
-            
+            border-top: #333 solid 2px;
+            border-bottom: #333 solid 2px;
+            background-color: rgb(173, 106, 106);
         }
 
         .nav-links a {
             text-decoration: none;
             color: #333;
             font-weight: bold;
+            font-size: 20px;
             font-family: 'Bahnschrift', sans-serif;
+            /* background-color: #eee5e5; */
+            padding: 10px 15px;
+            border-radius: 5px;
         }
-
-        /* Content Styling */
         .main-content {
             padding: 40px 5%;
         }
-
+        header h1 {
+            text-align: center; 
+            margin-bottom: 40px; 
+            border-top: #333 solid 3px; 
+            border-bottom: #333 solid 3px; 
+            background-color: #c34e4e; 
+            color: white; 
+            padding: 20px;
+        }
         .content-wrapper {
-            display: flex; /* Replaced float with flex */
+            display: flex; 
             gap: 30px;
             align-items: flex-start;
-            margin-top: 20px;
+            margin: 50px 0;
         }
 
         .photo {
@@ -62,21 +76,28 @@
 
         .text-block {
             text-align: justify;
+            font-size: larger;
             font-size: 1.1rem;
+            text-align: justify;
+            padding: 10px;
+             background-color: rgba(208, 118, 118, 0.8);
+             border-radius: 8px;
+             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
 
         footer {
-            margin-top: 50px;
             text-align: center;
-            padding: 40px;
-            background-color: aliceblue;
+            padding: 1rem;
+            background-color: rgb(173, 91, 91);
+            border-block-start: 1px solid #ddd;
         }
 
         footer a {
             display: inline-block;
-            margin: 5px 0;
-            color: #0077b5;
+            margin: 5px 10px;
+            color: #111415;
             text-decoration: none;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -84,10 +105,11 @@
 
     <nav class="navbar">
         <div class="logo">
-            <img src="E:/ITVAC FSWD/ZSGS FrontEnd/Front-End-Practice/img/Gshoplogo.png" alt="GShop Logo">
+            <img src="img/Gshoplogo.png" alt="GShop Logo">
         </div>
         
     </nav>
+    <br>
     <nav>
         <div class="nav-links">
             <a href="#">Home</a>
@@ -118,7 +140,7 @@
 
     <footer>
         <a href="#">@Gshow2026</a><br>
-        <a href="#">LinkedIn</a><br>
+        <a href="https://www.linkedin.com/in/gokulraj-v">LinkedIn</a><br>
         <a href="#">Gshop.com</a>
     </footer>
 
