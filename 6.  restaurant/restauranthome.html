@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Homepage</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            position: sticky;
+            top: 0;
+            background-color: yellow;
+            padding: 10px;
+            z-index: 100;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: black;
+        }
+        .hero {
+            position: relative;
+            height: 400px;
+            background-image: url('https://via.placeholder.com/1200x400?text=Restaurant+Banner');
+            background-size: cover;
+            background-position: center;
+        }
+        .hero .book-btn {
+            position: relative;
+            left: 50px;
+            top: 20px;
+            background-color: #ff5722;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        .cta-badge {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: red;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 24px;
+        }
+        .welcome {
+            background-color: blue;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .specials {
+            background-color: green;
+            color: white;
+            padding: 20px;
+        }
+        .reviews {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <button class="book-btn">Book Table</button>
+        <div class="cta-badge">20% OFF Today!</div>
+    </section>
+    <main>
+        <section class="welcome">
+            <h2>Welcome to Our Restaurant</h2>
+            <p>Enjoy delicious food and great ambiance.</p>
+        </section>
+        <section class="specials">
+            <h2>Today's Specials</h2>
+            <ul>
+                <li>Special Dish 1</li>
+                <li>Special Dish 2</li>
+                <li>Special Dish 3</li>
+            </ul>
+        </section>
+        <section class="reviews">
+            <h2>Customer Reviews</h2>
+            <p>"Great food!" - Customer 1</p>
+            <p>"Amazing service!" - Customer 2</p>
+        </section>
+    </main>
+</body>
+</html>

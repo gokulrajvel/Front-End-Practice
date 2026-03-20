@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Cards Comparison</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1000px;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            margin-block-end: 50px;
+            font-size: 2.5em;
+        }
+
+        .pricing {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .basic, .premium {
+            flex: 1;
+            min-inline-size: 250px;
+        }
+
+        .popular {
+            flex: 1.2;
+            transform: scale(1.05);
+            order: -1;
+            min-inline-size: 250px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .card.popular {
+            border: 3px solid #667eea;
+            background: #f8f9ff;
+        }
+
+        .card-title {
+            font-size: 1.5em;
+            color: #333;
+            margin-block-end: 15px;
+            font-weight: bold;
+        }
+
+        .card-price {
+            font-size: 3em;
+            color: #667eea;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .card-price span {
+            font-size: 0.4em;
+            color: #666;
+        }
+
+        .card-duration {
+            color: #999;
+            margin-block-end: 30px;
+            font-size: 0.9em;
+        }
+
+        .features {
+            list-style: none;
+            margin: 30px 0;
+            text-align: start;
+        }
+
+        .features li {
+            padding: 12px 0;
+            border-block-end: 1px solid #eee;
+            color: #666;
+        }
+
+        .features li:before {
+            content: "✓ ";
+            color: #667eea;
+            font-weight: bold;
+            margin-inline-end: 10px;
+        }
+
+        .btn {
+            inline-size: 100%;
+            padding: 15px;
+            margin-block-start: 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-basic, .btn-premium {
+            background: #e8e8e8;
+            color: #333;
+        }
+
+        .btn-basic:hover, .btn-premium:hover {
+            background: #d0d0d0;
+        }
+
+        .btn-popular {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-popular:hover {
+            background: #764ba2;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            margin-block-end: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Choose Your Plan</h1>
+        
+        <div class="pricing">
+            <div class="card basic">
+                <h2 class="card-title">Basic</h2>
+                <div class="card-price">₹999<span>/month</span></div>
+                <p class="card-duration">Perfect for beginners</p>
+                <ul class="features">
+                    <li>5 Projects</li>
+                    <li>2 GB Storage</li>
+                    <li>Email Support</li>
+                    <li>Community Access</li>
+                </ul>
+                <button class="btn btn-basic">Get Started</button>
+            </div>
+
+            <div class="card popular">
+                <span class="badge">MOST POPULAR</span>
+                <h2 class="card-title">Professional</h2>
+                <div class="card-price">₹2,999<span>/month</span></div>
+                <p class="card-duration">Best for professionals</p>
+                <ul class="features">
+                    <li>Unlimited Projects</li>
+                    <li>100 GB Storage</li>
+                    <li>Priority Support</li>
+                    <li>Advanced Analytics</li>
+                    <li>API Access</li>
+                </ul>
+                <button class="btn btn-popular">Start Free Trial</button>
+            </div>
+
+            <div class="card premium">
+                <h2 class="card-title">Enterprise</h2>
+                <div class="card-price">₹9,999<span>/month</span></div>
+                <p class="card-duration">For large teams</p>
+                <ul class="features">
+                    <li>Unlimited Everything</li>
+                    <li>1 TB Storage</li>
+                    <li>24/7 Phone Support</li>
+                    <li>Custom Integration</li>
+                    <li>Dedicated Manager</li>
+                </ul>
+                <button class="btn btn-premium">Contact Sales</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
