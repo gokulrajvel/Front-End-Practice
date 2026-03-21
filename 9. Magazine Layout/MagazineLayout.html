@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magazine Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .magazine {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-template-rows: auto 1fr auto;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .main-story {
+            grid-column: 1;
+            grid-row: 1 / -1;
+            border-right: 1px solid #ddd;
+            padding-right: 30px;
+        }
+
+        .main-story h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .main-story .subtitle {
+            font-size: 1.2em;
+            color: #666;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .main-story img {
+            width: 100%;
+            height: auto;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .main-story p {
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .sidebar {
+            grid-column: 2;
+            grid-row: 1 / -1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .sidebar-item {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-left: 4px solid #e74c3c;
+        }
+
+        .sidebar-item h3 {
+            color: #e74c3c;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .sidebar-item p {
+            font-size: 0.95em;
+            color: #666;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <article class="magazine">
+        <section class="main-story">
+            <h1>The Future of Web Design</h1>
+            <p class="subtitle">Exploring emerging trends and technologies shaping modern interfaces</p>
+            
+            <img src="https://www.ipstechnologyservices.com/ipstec/wp-content/uploads/2023/03/ipsts.png" alt="Web Design">
+            
+            <p>
+                The landscape of web design continues to evolve at a remarkable pace. From responsive layouts to advanced CSS frameworks, designers today have more tools than ever to create compelling digital experiences. The shift towards mobile-first design has fundamentally changed how we approach layout and navigation.
+            </p>
+
+            <p>
+                Accessibility has become a core principle rather than an afterthought. Modern designers must consider users with varying abilities, ensuring their creations are inclusive and usable by everyone. This includes proper color contrast, keyboard navigation, and semantic HTML structure.
+            </p>
+
+            <p>
+                The integration of artificial intelligence and machine learning into design workflows promises to automate repetitive tasks and generate insights from user behavior. These technologies enable designers to make data-driven decisions about layout, typography, and interaction patterns.
+            </p>
+
+            <p>
+                As performance becomes increasingly critical, optimization techniques like lazy loading, code splitting, and efficient asset delivery are essential. Users expect fast, smooth experiences regardless of their network conditions or device capabilities.
+            </p>
+        </section>
+
+        <aside class="sidebar">
+            <div class="sidebar-item">
+                <h3>Quick Facts</h3>
+                <p>• 60% of web traffic comes from mobile devices<br>• Average page load time: 2.5 seconds<br>• Accessibility features increase user engagement by 25%</p>
+            </div>
+
+            <div class="sidebar-item">
+                <h3>Featured Tools</h3>
+                <p>Check out the latest design tools: Figma, Adobe XD, and Webflow are leading the industry with innovative features for modern designers.</p>
+            </div>
+
+            <div class="sidebar-item">
+                <h3>Industry Insights</h3>
+                <p>Dark mode adoption has increased 40% in the past year. Many users prefer it for reduced eye strain and improved battery life on mobile devices.</p>
+            </div>
+        </aside>
+    </article>
+</body>
+</html>
