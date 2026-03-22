@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Product Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="product-section">
+            <div class="product-images">
+                <div class="main-image">
+                    <img id="mainImage" src="https://m.media-amazon.com/images/I/51IT0Gj+6ML._SL1131_.jpg" alt="Product">
+                </div>
+                <div class="thumbnail-images">
+                    <div class="thumbnail" onclick="changeImage('https://m.media-amazon.com/images/I/61-aVZ0fdgL._SL1200_.jpg')">
+                        <img src="https://m.media-amazon.com/images/I/61-aVZ0fdgL._SL1200_.jpg" alt="Thumbnail 1" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="thumbnail" onclick="changeImage('https://m.media-amazon.com/images/I/61y4XHSSM8L._SL1200_.jpg')">
+                        <img src="https://m.media-amazon.com/images/I/61y4XHSSM8L._SL1200_.jpg" alt="Thumbnail 2" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="thumbnail" onclick="changeImage('https://m.media-amazon.com/images/I/61PtCJxkt6L._SL1200_.jpg')">
+                        <img src="https://m.media-amazon.com/images/I/61PtCJxkt6L._SL1200_.jpg" alt="Thumbnail 3" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+            <div class="product-details">
+                <h1>soundcore by Anker,Space One,Active Noise Cancelling in Ear Headphones,2X Stronger Voice Reduction,40H ANC Playtime,App Control,Ldac Hi-Res Wireless Audio,Comfortable Fit,Clear Calls,Bluetooth 5.3
+Visit the soundcore Store</h1>
+                
+                <div class="rating">
+                    <span class="stars">★★★★★</span>
+                    <span>(258 reviews)</span>
+                </div>
+                
+                <div class="price">
+                    <span class="original-price">Rs.2990.99</span>Rs.2129.99
+                </div>
+                
+                <p class="description">
+                    Experience crystal-clear sound with our premium wireless headphones. Featuring active noise cancellation, 55-hour battery life, and premium comfort for all-day listening.
+                </p>
+                
+                <div class="features">
+                    <ul>
+                        <li>Active Noise Cancellation (ANC)</li>
+                        <li>30-hour battery life</li>
+                        <li>Premium comfort design</li>
+                        <li>Bluetooth 5.0 connectivity</li>
+                        <li>Built-in microphone for calls</li>
+                        <li>Foldable design with carrying case</li>
+                    </ul>
+                </div>
+                
+                <div class="quantity-selector">
+                    <label>Quantity:</label>
+                    <button onclick="decrementQty()">-</button>
+                    <input type="number" id="quantity" value="1" min="1">
+                    <button onclick="incrementQty()">+</button>
+                </div>
+                
+                <div class="action-buttons">
+                    <button class="btn-primary" onclick="addToCart()">Add to Cart</button>
+                    <button class="btn-secondary" onclick="addToWishlist()">♡ Wishlist</button>
+                </div>
+                
+                <p style="color: #28a745;">✓ In Stock | Free Shipping on orders over Rs.1000</p>
+            </div>
+        </div>
+        
+        <!-- Reviews Section -->
+        <div class="reviews-section">
+            <h2>Customer Reviews</h2>
+            
+            <div class="review">
+                <div class="review-header">
+                    <span class="reviewer-name">John Doe</span>
+                    <span class="review-date">2 days ago</span>
+                </div>
+                <div class="review-rating">★★★★★</div>
+                <p class="review-text">
+                    Excellent headphones! The sound quality is amazing and the noise cancellation works perfectly. Very comfortable to wear for long periods. Highly recommended!
+                </p>
+                <div class="review-helpful">
+                    <button>👍 Helpful (42)</button>
+                    <button>👎 Not Helpful (2)</button>
+                </div>
+            </div>
+            
+            <div class="review">
+                <div class="review-header">
+                    <span class="reviewer-name">Sarah Smith</span>
+                    <span class="review-date">1 week ago</span>
+                </div>
+                <div class="review-rating">★★★★☆</div>
+                <p class="review-text">
+                    Great value for money. Battery life is impressive, and the build quality feels premium. Only minor issue is the app could be more intuitive.
+                </p>
+                <div class="review-helpful">
+                    <button>👍 Helpful (28)</button>
+                    <button>👎 Not Helpful (1)</button>
+                </div>
+            </div>
+            
+            <div class="review">
+                <div class="review-header">
+                    <span class="reviewer-name">Mike Johnson</span>
+                    <span class="review-date">2 weeks ago</span>
+                </div>
+                <div class="review-rating">★★★★★</div>
+                <p class="review-text">
+                    Best headphones I've ever owned. The noise cancellation is industry-leading, and they're so comfortable I forget I'm wearing them. Worth every penny!
+                </p>
+                <div class="review-helpful">
+                    <button>👍 Helpful (156)</button>
+                    <button>👎 Not Helpful (5)</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function changeImage(src) {
+            document.getElementById('mainImage').src = src;
+        }
+        
+        function incrementQty() {
+            const qty = document.getElementById('quantity');
+            qty.value = parseInt(qty.value) + 1;
+        }
+        
+        function decrementQty() {
+            const qty = document.getElementById('quantity');
+            if (parseInt(qty.value) > 1) {
+                qty.value = parseInt(qty.value) - 1;
+            }
+        }
+        
+        function addToCart() {
+            const qty = document.getElementById('quantity').value;
+            alert(`Added ${qty} item(s) to cart!`);
+        }
+        
+        function addToWishlist() {
+            alert('Added to wishlist!');
+        }
+    </script>
+</body>
+</html>
