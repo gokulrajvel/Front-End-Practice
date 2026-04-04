@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desktop Only Elements</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            padding: 24px;
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            color: #1f2937;
+        }
+
+        .page {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        h1 {
+            margin-bottom: 24px;
+            text-align: center;
+            color: #1d4ed8;
+        }
+
+        .layout {
+            display: grid;
+            grid-template-columns: 260px 1fr;
+            gap: 24px;
+        }
+
+        .sidebar,
+        .content,
+        .desktop-note {
+            border-radius: 16px;
+            background: white;
+            box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+        }
+
+        .sidebar {
+            padding: 24px;
+        }
+
+        .sidebar h2 {
+            margin-bottom: 16px;
+            color: #1d4ed8;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar li {
+            padding: 10px 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .content {
+            padding: 24px;
+        }
+
+        .content h2 {
+            margin-bottom: 12px;
+        }
+
+        .content p {
+            line-height: 1.7;
+            color: #4b5563;
+        }
+
+        .desktop-note {
+            margin-top: 20px;
+            padding: 18px 20px;
+            background: #dbeafe;
+            color: #1e3a8a;
+        }
+
+        .desktop-only {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .layout {
+                grid-template-columns: 1fr;
+            }
+
+            .desktop-only {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <h1>Show on Desktop, Hide on Mobile</h1>
+
+        <div class="layout">
+            <aside class="sidebar desktop-only">
+                <h2>Sidebar</h2>
+                <ul>
+                    <li>Dashboard</li>
+                    <li>Reports</li>
+                    <li>Analytics</li>
+                    <li>Settings</li>
+                </ul>
+            </aside>
+
+            <main class="content">
+                <h2>Main Content</h2>
+                <p>
+                    This section is always visible. The sidebar on the left is only shown on desktop and
+                    tablet-sized screens. When the screen becomes mobile-sized, the sidebar is hidden.
+                </p>
+
+                <div class="desktop-note desktop-only">
+                    Desktop-only note: this extra information is hidden on mobile screens.
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
