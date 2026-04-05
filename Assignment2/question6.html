@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 6</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #e0f2fe, #f8fafc);
+            font-family: Arial, sans-serif;
+        }
+
+        .stage {
+            width: 520px;
+            max-width: 92vw;
+            height: 280px;
+            padding: 24px;
+            border-radius: 24px;
+            background: rgba(255, 255, 255, 0.78);
+            box-shadow: 0 18px 40px rgba(15, 23, 42, 0.14);
+            display: flex;
+            align-items: center;
+        }
+
+        .animated-box {
+            width: 90px;
+            height: 90px;
+            border-radius: 20px;
+            background: #2563eb;
+            animation: multiStep 4s ease-in-out infinite;
+        }
+
+        @keyframes multiStep {
+            0% {
+                transform: translateX(0) rotate(0deg) scale(1);
+                background-color: #2563eb;
+            }
+
+            25% {
+                transform: translateX(110px) rotate(0deg) scale(1);
+                background-color: #2563eb;
+            }
+
+            50% {
+                transform: translateX(220px) rotate(180deg) scale(1);
+                background-color: #2563eb;
+            }
+
+            75% {
+                transform: translateX(320px) rotate(180deg) scale(1);
+                background-color: #f97316;
+            }
+
+            100% {
+                transform: translateX(390px) rotate(180deg) scale(1.35);
+                background-color: #10b981;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="stage">
+        <div class="animated-box"></div>
+    </div>
+</body>
+</html>
